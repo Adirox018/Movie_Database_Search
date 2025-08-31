@@ -1,0 +1,237 @@
+/* ========== GLOBAL RESET ========== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* ========== NAVIGATION BAR ========== */
+.Nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to right, #e52d27, #ff6e7f);
+  padding: 20px 40px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Logo (left side) */
+.logo {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Center Search Bar */
+.search-form {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.search-form input[type="search"] {
+  width: 100%;
+  max-width: 500px;
+  padding: 10px 50px;
+  border: 2px solid white;
+  border-radius: 50px;
+  background-color: rgba(220, 23, 23, 0.3);
+  color: white;
+  font-size: 16px;
+  outline: none;
+}
+
+.search-form input::placeholder {
+  color: #f5c7c7;
+}
+
+/* Logout Button (right side) */
+.logout-btn {
+  background-color: white;
+  color: #e52d27;
+  font-weight: bold;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  margin-left: 20px;
+}
+
+.logout-btn:hover {
+  transform: scale(1.05);
+  background-color: #ffe5e5;
+}
+
+.logo:hover {
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.6);
+}
+
+/* Hover effect for search input */
+.search-form input[type="search"]:hover {
+  transform: scale(1.05);
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+/* Refresh button hover */
+#refreshButton {
+  transition: transform 0.3s ease;
+}
+
+#refreshButton:hover {
+  transform: scale(1.05);
+}
+
+input {
+  all: unset;
+  font: 15px system-ui;
+  color: white;
+  height: 100%;
+  width: 100%;
+  padding: 5px 10px;
+}
+
+/* ========== MOVIE GRID ========== */
+#section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  width: 90%;
+  margin: auto;
+}
+
+/* Card Layout */
+.card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  padding: 10px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Movie poster */
+.thumbnail {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+  pointer-events: none;
+}
+
+/* Movie title */
+.card h3 {
+  margin-top: 10px;
+  font-size: 16px;
+  color: black;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ========== FOOTER ========== */
+footer {
+  background: linear-gradient(to right, rgb(21, 31, 48), black);
+  color: white;
+  display: flex;
+  padding: 0.3rem 5%;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+footer ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer ul li {
+  margin-left: 10px;
+}
+
+footer h4 {
+  flex: 1;
+  font-size: calc(1.2rem + 0.5vw);
+}
+
+/* Light mode (default) */
+body.light-mode {
+  background-color: white;
+  color: black;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+.dark-mode .Nav {
+  background: linear-gradient(to right, #111, #333);
+}
+
+.dark-mode .logo {
+  color: white;
+}
+
+.dark-mode .search-form input {
+  background-color: #222;
+  color: white;
+  border-color: white;
+}
+
+.dark-mode .search-form input::placeholder {
+  color: #ccc;
+}
+
+.dark-mode .card {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+.mode-toggle {
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  padding: 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+.dark-mode .mode-toggle {
+  background-color: #333;
+  color: white;
+  border-color: white;
+}
+
+/* Light mode (default, already handled) */
+.card h3 {
+  color: black;
+}
+
+/* Dark mode title color */
+.dark-mode .card h3 {
+  color: white;
+}
+body.dark-mode .card h3 {
+  color: white !important;
+}

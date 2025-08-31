@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Signup</title>
+  <link rel="stylesheet" href="/css/pqr.css" />
+</head>
+<body>
+  <h2>Sign Up</h2>
+  <form action="/signup" method="post">
+    <input type="text" name="name" placeholder="Name" required />
+    <input type="password" id="password" name="password" placeholder="Password" required />
+    <div id="passwordStrength" class="password-strength"></div>
+    <input type="submit" value="Sign Up" />
+  </form>
+  <a href="/">Back to Login</a>
+  <script src="/js/passwordStrength.js"></script>
+</body>
+</html>

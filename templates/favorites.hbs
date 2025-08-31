@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Favorites</title>
+  <link rel="stylesheet" href="/css/home.css" />
+</head>
+<body>
+  <div class="Nav">
+    <a href="/home" class="logo">Movie App</a>
+    <div>
+      <a href="/logout" class="logout-btn">Logout</a>
+    </div>
+  </div>
+
+  <h2 style="text-align:center;">My Favorite Movies</h2>
+  <section id="favoritesSection">
+    {{#each favorites}}
+    <div class="card">
+      <img class="thumbnail" src="{{this.image}}" />
+      <h3>{{this.title}}</h3>
+    </div>
+    {{/each}}
+  </section>
+
+  <footer>
+    <h4>Movie Search App</h4>
+  </footer>
+</body>
+</html>
